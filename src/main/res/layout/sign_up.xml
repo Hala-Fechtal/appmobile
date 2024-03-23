@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pinksky">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="629dp"
+        android:backgroundTint="@color/lavender_blush"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <!-- "Vous êtes" Label -->
+        <TextView
+            android:id="@+id/tvVousEtes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Vous êtes"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Radio Group for Gender Selection -->
+        <RadioGroup
+            android:id="@+id/radioGroupVousEtes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/tvVousEtes"
+            app:layout_constraintTop_toTopOf="@id/tvVousEtes">
+
+            <!-- Radio Button for "Homme" -->
+            <RadioButton
+                android:id="@+id/radioButtonRecruteur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Recruteur cherche des CV et pose des annonces de travail"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/hot_pink"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <!-- Radio Button for "Femme" -->
+            <RadioButton
+                android:id="@+id/radioButtonCandidat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/hot_pink"
+
+                android:layout_marginStart="16dp"
+                android:text="Candidat cherche des annonces et pose des CV"
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <!-- Email EditText -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="10dp">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="right"
+                android:text="Email:"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/text_border"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColorHint="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupVousEtes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="30dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+
+            tools:layout_editor_absoluteX="10dp">
+
+            <TextView
+                android:id="@+id/ville"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="16dp"
+                android:gravity="right"
+                android:text="Ville:"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinnerCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/text_border"
+                android:padding="10dp"
+                android:textColorHint="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingRight="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="10dp">
+
+            <TextView
+                android:id="@+id/passe"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="right"
+                android:text="Mot de passe:"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+
+                android:background="@drawable/text_border"
+                android:hint="Mot de passe:"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColorHint="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/msg3"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="5dp"
+            android:text="(au moins 5 caractéres) Choisisez un mot de passe qui n'est pas facile à deviner:"
+            android:textColor="@color/black"
+            android:textSize="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="378dp"
+                android:layout_height="122dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingRight="30dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="10dp">
+
+            <TextView
+                android:id="@+id/Cpasse"
+                android:layout_width="110dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="right"
+                android:text="Confirmer mot de passe:"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/text_border"
+                android:hint="Confirmer mot de passe"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColorHint="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+        <!-- Password EditText -->
+
+        <!-- Confirm Password EditText -->
+
+
+        <!-- City Selector -->
+
+
+        <!-- Sign Up Button -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="#B43B4253"
+        android:orientation="horizontal"
+
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
+
+        <TextView
+            android:id="@+id/tvmsg2"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="En validant mon inscription ,j'accepte les conditions générales d'utilisation du site alkhad.ma."
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/hot_pink"
+            android:text="Créer un compte"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
